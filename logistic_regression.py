@@ -3,6 +3,11 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 # import the class
 from sklearn.linear_model import LogisticRegression
+# import required modules
+import numpy as np
+import matplotlib.pyplot as plt
+
+from sklearn.metrics import classification_report
 col_names = ['pregnant', 'glucose', 'bp', 'skin', 'insulin', 'bmi', 'pedigree', 'age', 'label']
 # load dataset
 pima = pd.read_csv("diabetes.csv", header=1, names=col_names)
@@ -29,12 +34,6 @@ from sklearn import metrics
 
 cnf_matrix = metrics.confusion_matrix(y_test, y_pred)
 print(cnf_matrix)
-
-# import required modules
-import numpy as np
-import matplotlib.pyplot as plt
-
-from sklearn.metrics import classification_report
 target_names = ['without diabetes', 'with diabetes']
 print(classification_report(y_test, y_pred, target_names=target_names))
 
