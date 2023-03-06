@@ -58,16 +58,16 @@ print(f"Car reduced percent: {pBike}")
 # 22 miles gallon
 distance = 3.2 * pBike
 print(f"reduced by {distance} trillion miles")
-gallons = distance/22
+gallons = distance/22 #in trillions
 print(f"reduced by {gallons * 1000} billion gallons")
-kgCO2 = gallons*8876/1000
-print(f"reduced by {kgCO2 * 1000} million tons of CO2")
+kgCO2 = gallons*8876/10000000 # still in trillions
+print(f"reduced by {kgCO2 * 10000000} million tons of CO2")
 
 # 1170/100million drivers
 rides = distance/11.5
 print(f"reduced by {rides * 1000} billion rides")
 deaths = 1000000000000*(distance)/14263/100000 * 17.01
-deaths -= rides * 1000000000000 * 19/100000000
+# deaths -= rides * 1000000000000 * 19/100000000
 print(f"reduced by {deaths} deaths")
 
 # 15 calories per mile
